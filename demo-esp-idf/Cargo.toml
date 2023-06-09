@@ -1,5 +1,5 @@
 [package]
-name = "racegate-esp-idf"
+name = "demo-esp-idf"
 version = "0.1.0"
 authors = ["Alessandro Pezzato <alessandro@pezzato.net>"]
 edition = "2021"
@@ -16,7 +16,7 @@ esp-idf-hal = { version = "0.40" }
 esp-idf-svc = { version = "0.45", features = ["experimental", "alloc"] }
 esp-idf-sys = { version = "0.32", features = ["binstart", "native"] }
 log = "0.4"
-racegate = { path = "../racegate" }
+demo = { path = "../demo" }
 serde = { version = "1.0.160", features = ["serde_derive"] }
 serde_json = "1.0.95"
 

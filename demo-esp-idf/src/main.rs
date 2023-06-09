@@ -1,10 +1,10 @@
 use std::time::{Duration, Instant};
 
+use demo::app::App;
+use demo::hal::wifi::WifiConfig;
 use esp_idf_sys as _;
-use racegate::app::App;
-use racegate::hal::wifi::WifiConfig;
 
-use racegate_esp_idf::platform::{BoardType, Config, PlatformImpl};
+use demo_esp_idf::platform::{BoardType, Config, PlatformImpl};
 
 const TASK_WAKEUP_PERIOD: Duration = Duration::from_millis(20);
 
@@ -14,9 +14,6 @@ fn main() -> anyhow::Result<()> {
 
     let config = Config {
         wifi: WifiConfig::from_env_var().unwrap_or_default(),
-        #[cfg(feature = "m5stampc3")]
-        board_type: BoardType::M5StampC3,
-        #[cfg(feature = "rustdevkit")]
         board_type: BoardType::RustDevKit,
     };
 

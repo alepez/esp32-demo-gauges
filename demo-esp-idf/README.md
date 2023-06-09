@@ -1,6 +1,6 @@
-# racegate-esp-idf
+# demo
 
-**racegate** implementation for *esp-idf* framework.
+Rust on ESP32 and WASM
 
 ## Setup
 

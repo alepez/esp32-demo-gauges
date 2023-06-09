@@ -9,7 +9,7 @@ use esp_idf_hal::modem::Modem;
 use esp_idf_svc::eventloop::EspSystemEventLoop;
 use esp_idf_svc::nvs::EspDefaultNvsPartition;
 use esp_idf_svc::wifi::WifiWait;
-use racegate::hal::wifi::{Wifi, WifiConfig};
+use demo::hal::wifi::{Wifi, WifiConfig};
 
 pub struct EspWifi {
     esp_wifi: RefCell<esp_idf_svc::wifi::EspWifi<'static>>,

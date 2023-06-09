@@ -1,6 +1,6 @@
 use esp_idf_hal::gpio::{AnyInputPin, Input, PinDriver};
-use racegate::hal::dip_switch::DipSwitch;
-use racegate::svc::race_node::NodeAddress;
+use demo::hal::dip_switch::DipSwitch;
+use demo::svc::race_node::NodeAddress;
 
 pub struct EspDipSwitch {
     pins: [PinDriver<'static, AnyInputPin, Input>; 3],

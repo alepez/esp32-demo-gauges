@@ -1,12 +1,12 @@
 use esp_idf_hal::gpio::InputPin;
 use esp_idf_hal::peripherals::Peripherals;
-use racegate::hal::button::Button;
-use racegate::hal::dip_switch::DipSwitch;
-use racegate::hal::gate::Gate;
-use racegate::hal::rgb_led::RgbLed;
-use racegate::hal::wifi::{Wifi, WifiConfig};
-use racegate::hal::Platform;
-use racegate::svc::{HttpServer, RaceNode};
+use demo::hal::button::Button;
+use demo::hal::dip_switch::DipSwitch;
+use demo::hal::gate::Gate;
+use demo::hal::rgb_led::RgbLed;
+use demo::hal::wifi::{Wifi, WifiConfig};
+use demo::hal::Platform;
+use demo::svc::{HttpServer, RaceNode};
 
 use crate::drivers::button::EspButton;
 use crate::drivers::dip_switch::EspDipSwitch;

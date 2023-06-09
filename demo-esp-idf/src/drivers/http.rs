@@ -10,7 +10,7 @@ use embedded_svc::ws::FrameType;
 use esp_idf_svc::http::server::ws::EspHttpWsDetachedSender;
 use esp_idf_svc::http::server::{Configuration, EspHttpServer};
 use esp_idf_sys::EspError;
-use racegate::app::SystemState;
+use demo::app::SystemState;
 
 struct StateSender {
     ws: EspHttpWsDetachedSender,
@@ -197,7 +197,7 @@ impl HttpServer {
     }
 }
 
-impl racegate::svc::HttpServer for HttpServer {
+impl demo::svc::HttpServer for HttpServer {
     fn set_system_state(&self, state: &SystemState) {
         // try_lock is used because we want to avoid waiting for the lock to be
         // acquired and we accept to miss some update.

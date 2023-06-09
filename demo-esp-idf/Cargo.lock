@@ -378,6 +378,31 @@ dependencies = [
 ]
 
 [[package]]
+name = "demo"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "log",
+ "serde",
+]
+
+[[package]]
+name = "demo-esp-idf"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "demo",
+ "embedded-svc",
+ "embuild",
+ "esp-idf-hal",
+ "esp-idf-svc",
+ "esp-idf-sys",
+ "log",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "dirs"
 version = "5.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1142,31 +1167,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4424af4bf778aae2051a77b60283332f386554255d722233d09fbfc7e30da2fc"
 dependencies = [
  "proc-macro2",
-]
-
-[[package]]
-name = "racegate"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "log",
- "serde",
-]
-
-[[package]]
-name = "racegate-esp-idf"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "embedded-svc",
- "embuild",
- "esp-idf-hal",
- "esp-idf-svc",
- "esp-idf-sys",
- "log",
- "racegate",
- "serde",
- "serde_json",
 ]
 
 [[package]]

@@ -5,10 +5,10 @@ flash() {
   local serial="${2}"
   local address="${3}"
 
-  local wifi_default_pass="racegate"
-  local wifi_default_ssid="racegate"
+  local wifi_default_pass="demo"
+  local wifi_default_ssid="demo"
 
-  if [ -z "${RACEGATE_WIFI_CONFIG}" ]; then
+  if [ -z "${DEMO_WIFI_CONFIG}" ]; then
     # Unless wifi configuration is overridden by env var
     local wifi_ap_enabled="false"
     if [ "${address}" == "0" ]; then
@@ -16,16 +16,16 @@ flash() {
       wifi_ap_enabled="true"
     fi
 
-    RACEGATE_WIFI_CONFIG="${wifi_ap_enabled}:${wifi_default_ssid}:${wifi_default_pass}"
+    DEMO_WIFI_CONFIG="${wifi_ap_enabled}:${wifi_default_ssid}:${wifi_default_pass}"
   fi
 
-  RACEGATE_NODE_ADDRESS="${address}"
+  DEMO_NODE_ADDRESS="${address}"
 
-  export RACEGATE_NODE_ADDRESS
-  export RACEGATE_WIFI_CONFIG
+  export DEMO_NODE_ADDRESS
+  export DEMO_WIFI_CONFIG
 
-  echo "RACEGATE_NODE_ADDRESS=${RACEGATE_NODE_ADDRESS}"
-  echo "RACEGATE_WIFI_CONFIG=${RACEGATE_WIFI_CONFIG}"
+  echo "DEMO_NODE_ADDRESS=${DEMO_NODE_ADDRESS}"
+  echo "DEMO_WIFI_CONFIG=${DEMO_WIFI_CONFIG}"
 
   cargo espflash \
     --features="${platform}" \

@@ -8,7 +8,7 @@ use esp_idf_sys::{
     rmt_tx_config_t, rmt_wait_tx_done, rmt_write_sample, u_int8_t,
 };
 
-use racegate::hal::rgb_led::{RgbLed, RgbLedColor};
+use demo::hal::rgb_led::{RgbLed, RgbLedColor};
 
 pub struct WS2812RgbLed(RefCell<WS2812RMT>);
 
