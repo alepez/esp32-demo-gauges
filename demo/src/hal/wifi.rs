@@ -32,7 +32,7 @@ impl WifiConfig<'_> {
     }
 
     pub fn from_env_var() -> Result<Self, WifiConfigError> {
-        if let Some(s) = option_env!("RACEGATE_WIFI_CONFIG") {
+        if let Some(s) = option_env!("DEMO_WIFI_CONFIG") {
             WifiConfig::try_from_str(s)
         } else {
             Err(WifiConfigError::EnvVarNotAvailable)
@@ -44,8 +44,8 @@ impl Default for WifiConfig<'_> {
     fn default() -> Self {
         WifiConfig {
             ap: true,
-            ssid: "racegate",
-            password: "racegate",
+            ssid: "rustdemo",
+            password: "rustdemo",
         }
     }
 }
