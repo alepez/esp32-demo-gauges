@@ -54,7 +54,7 @@ impl StateSenders {
             }
 
             if err_count > 0 {
-                log::error!("error sending gate status");
+                log::error!("error sending status");
             }
         }
     }
