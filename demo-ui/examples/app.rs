@@ -3,9 +3,7 @@
 use std::time::Duration;
 
 use dioxus_desktop::Config as DesktopConfig;
-use racegate::app::{Gate, Gates, Race, SystemState};
-use racegate::svc::CoordinatedInstant;
-use racegate_ui::app::{Dashboard, DashboardProps};
+use demo_ui::app::{Dashboard, DashboardProps};
 
 fn test_default() -> SystemState {
     SystemState::default()

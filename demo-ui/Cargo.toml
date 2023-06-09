@@ -1,5 +1,5 @@
 [package]
-name = "racegate-ui"
+name = "demo-ui"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,10 +7,10 @@ edition = "2021"
 
 [dependencies]
 dioxus = "0.3.2"
+demo = { path = "../demo" }
 dioxus-web = "0.3.1"
 dioxus-websocket-hooks = { git = "https://github.com/alepez/dioxus-websocket-hooks", rev = "7db81f9" }
 fermi = "0.3"
-racegate = { path = "../racegate" }
 serde = { version = "1.0.160", features = ["serde_derive"] }
 serde_json = "1.0.95"
 web-sys = "0.3"

@@ -22,4 +22,4 @@ cargo = false
 [[hooks]]
 stage = "post_build"
 command = "sh"
-command_arguments = ["-c", "gzip --keep $TRUNK_STAGING_DIR/racegate-ui_bg.wasm"]
+command_arguments = ["-c", "gzip --keep $TRUNK_STAGING_DIR/demo-ui_bg.wasm"]

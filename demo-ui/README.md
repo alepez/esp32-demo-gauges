@@ -1,4 +1,4 @@
-# racegate-ui
+# demo-ui
 
 ## Build
 
