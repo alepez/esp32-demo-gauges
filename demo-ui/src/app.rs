@@ -42,7 +42,7 @@ fn hostname() -> Option<String> {
 }
 
 fn ws_url_from_hostname() -> String {
-    const DEFAULT_HOSTNAME: &'static str = "192.168.1.71.1";
+    const DEFAULT_HOSTNAME: &'static str = "192.168.71.1";
     let h = hostname().unwrap_or_else(|| DEFAULT_HOSTNAME.to_owned());
     format!("ws://{h}/state")
 }
