@@ -6,6 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+angle = "0.5"
 dioxus = "0.3.2"
 demo = { path = "../demo" }
 dioxus-web = "0.3.1"
@@ -14,6 +15,8 @@ fermi = "0.3"
 serde = { version = "1.0.160", features = ["serde_derive"] }
 serde_json = "1.0.95"
 web-sys = "0.3"
+# gauges = { git = "https://github.com/alepez/gauges", rev = "498cb9e" }
+gauges = { path = "../../gauges", default-features = false }
 
 [dev-dependencies]
 dioxus-desktop = "0.3"
