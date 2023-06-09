@@ -1,4 +1,4 @@
-use demo::SystemState;
+use demo::app::SystemState;
 use dioxus::prelude::*;
 use dioxus_websocket_hooks::use_ws_context_provider_json;
 use fermi::{use_init_atom_root, use_read, use_set, Atom};
@@ -22,8 +22,9 @@ pub fn App(cx: Scope) -> Element {
 
 #[allow(non_snake_case)]
 fn Main(cx: Scope) -> Element {
-    if let Some(_system_state) = use_read(cx, SYSTEM_STATE) {
-        cx.render(rsx!(div { "ready!" }))
+    if let Some(system_state) = use_read(cx, SYSTEM_STATE) {
+        let text = format!("{}", system_state.counter);
+        cx.render(rsx!(div { text }))
     } else {
         cx.render(rsx!(div { "loading..." }))
     }
