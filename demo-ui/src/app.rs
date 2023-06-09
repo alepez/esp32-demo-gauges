@@ -1,9 +1,8 @@
-use std::{rc::Rc, time::Duration};
-
 use demo::SystemState;
 use dioxus::prelude::*;
 use dioxus_websocket_hooks::use_ws_context_provider_json;
 use fermi::{use_init_atom_root, use_read, use_set, Atom};
+use std::rc::Rc;
 
 pub static SYSTEM_STATE: Atom<Option<SystemState>> = |_| None;
 
@@ -23,7 +22,11 @@ pub fn App(cx: Scope) -> Element {
 
 #[allow(non_snake_case)]
 fn Main(cx: Scope) -> Element {
-    cx.render(rsx!(div { "loading..." }))
+    if let Some(_system_state) = use_read(cx, SYSTEM_STATE) {
+        cx.render(rsx!(div { "ready!" }))
+    } else {
+        cx.render(rsx!(div { "loading..." }))
+    }
 }
 
 fn hostname() -> Option<String> {
