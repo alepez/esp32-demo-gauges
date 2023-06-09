@@ -120,9 +120,9 @@ impl OperationalState {
         let pressed = services.platform.button().is_pressed();
 
         if pressed {
-            self.system_state.counter = 0;
-        } else {
             self.system_state.counter += 1;
+        } else {
+            self.system_state.counter = 0;
         }
 
         services

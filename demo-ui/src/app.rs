@@ -33,14 +33,15 @@ const ARC_STYLE: GaugeStyle = GaugeStyle::Arc(ArcGaugeStyle {
 #[allow(non_snake_case)]
 fn Main(cx: Scope) -> Element {
     if let Some(system_state) = use_read(cx, SYSTEM_STATE) {
-        let value = Value::Float(system_state.counter as f64);
+        let counter = system_state.counter % 1000;
+        let value = Value::Float(counter as f64);
         let signal = SignalInfo {
             name: Some("Counter".to_owned()),
         };
         let style = ARC_STYLE;
         let range = Range {
             min: 0.,
-            max: 1_000_000.,
+            max: 1000.,
         };
         let format = GaugeTextFormat { precision: 0 };
         let age = Age::New;
